@@ -756,11 +756,13 @@ body.onload {overflow-y: auto;}
 			left: 0;
 			margin:auto;
 		}
+		&.foot-phone {width: 202px;}
 		&.foot-phone:before {@include icons-sprite(phone-f)}
 		&.foot-mail:before {@include icons-sprite(email-f)}
 		&.foot-feed:before {@include icons-sprite(letter)}
 	}
 }
+
 .foot__nm {display: block;}
 .foot__head {
 	@include fb;
@@ -1533,6 +1535,7 @@ form {
 }
 @media screen and (max-width: 1023px) { 
 	.foot-contact {font-size: 15px;}
+	.foot-contact a.foot-phone {width:159px;}
 	.top-section {min-height: 1px}
 	.char-box__item {
 	    margin: 0 19px 25px;
@@ -1870,6 +1873,7 @@ form {
 	.visible-mob {
 		display: block !important;
 	}
+	.foot-contact a.foot-phone {width: 25%;}
 	.foot-contact {
 		.foot__head,.foot__inf--mob {display: none;}
 		a {

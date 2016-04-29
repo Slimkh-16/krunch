@@ -184,12 +184,14 @@ if (document.querySelector('.modal') != undefined) {
     },600)
   };
   document.querySelector('.modal-mp1').onclick = function() {
+    document.body.classList.remove('hidden');
     document.querySelector('.modal-mp1').classList.remove('visible')
     setTimeout(function(){
       document.querySelector('.modal-mp1').style.display = 'none';
     },600)
   }
   document.querySelector('.modal-mp2').onclick = function() {
+    document.body.classList.remove('hidden');
     document.querySelector('.modal-mp2').classList.remove('visible')
     setTimeout(function(){
       document.querySelector('.modal-mp2').style.display = 'none';
@@ -274,43 +276,6 @@ function initialize() {
 };
 // map box
 // circles
-// if (document.querySelector('.circle') != undefined) {
-//   if (window.innerWidth > 700) {
-//     var rad_e = 107;
-//     var crc_W = 26;
-//     createCircles(rad_e,crc_W)
-//   } else {
-//     var rad_e = 60;
-//     var crc_W = 14;
-//     createCircles(rad_e,crc_W)
-//   }
-// }
-
-// function createCircles(rad_e,crc_W) {
-
-//   var colors = [
-//       ['#ffffff', '#4e658e'], ['#ffffff', '#689f38'], ['#ffffff', '#ef6c00'],
-//       ['#ffffff', '#4e658e'], ['#ffffff', '#689f38'], ['#ffffff', '#ef6c00']
-//     ],
-//     circles = [];
-//       console.log(rad_e)
-//   for (var i = 1; i <= colors.length; i++) {
-//     var child = document.getElementById('circles-' + i),
-//         data_max = child.getAttribute('data-max'),
-//         data_tek = child.getAttribute('data-tek'),
-//       circle = Circles.create({
-//         id:         child.id,
-//         value:      data_tek,
-//         maxValue:   data_max,
-//         text:    function(value){return value + 'min.';},
-//         radius:     rad_e,
-//         width:      crc_W,
-//         colors:     colors[i - 1]
-//       });
-//     circles.push(circle);
-//   }
-
-// }
 if (document.querySelector('.circle') != undefined) { 
   (function() {
     var offTop1 = document.getElementById('char-canvas').offsetTop - 300,
@@ -388,6 +353,19 @@ if (document.querySelector('.circle') != undefined) {
           }
         }
 
+    }
+    window.onresize = function() {
+      if(window.innerWidth > 700) {
+        var rad_e = 108;
+        var crc_W = 28; 
+        createCircles(rad_e,crc_W)
+        createCircles2(rad_e,crc_W)
+      }else {
+        var rad_e = 62;
+        var crc_W = 16;
+        createCircles(rad_e,crc_W)
+        createCircles2(rad_e,crc_W)
+      }
     }
 
   })();

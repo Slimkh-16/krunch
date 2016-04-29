@@ -992,6 +992,9 @@ body.onload {
   left: 0;
   margin: auto;
 }
+.foot-contact a.foot-phone {
+  width: 202px;
+}
 .foot-contact a.foot-phone:before {
   background-position: 0 -225px;
   height: 16px;
@@ -2203,6 +2206,10 @@ form button:hover {
     font-size: 15px;
   }
 
+  .foot-contact a.foot-phone {
+    width: 159px;
+  }
+
   .top-section {
     min-height: 1px;
   }
@@ -2910,6 +2917,10 @@ form button:hover {
 
   .visible-mob {
     display: block !important;
+  }
+
+  .foot-contact a.foot-phone {
+    width: 25%;
   }
 
   .foot-contact .foot__head, .foot-contact .foot__inf--mob {
