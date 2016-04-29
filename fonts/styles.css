@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'ft40-Roman';
+  src: url('ft40-Roman.eot?#iefix') format('embedded-opentype'),  url('ft40-Roman.otf')  format('opentype'),
+	     url('ft40-Roman.woff') format('woff'), url('ft40-Roman.ttf')  format('truetype'), url('ft40-Roman.svg#ft40-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
